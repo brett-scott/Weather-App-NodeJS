@@ -46,10 +46,11 @@ input {
     padding: 8px;
 }
 
-.main-content {
-    flex-grow: 1;
+select {
+    padding: 8px;
+    border: 1px solid #cccccc;
 }
 
-.portrait {
-    width: 250px;
+.main-content {
+    flex-grow: 1;
 }
