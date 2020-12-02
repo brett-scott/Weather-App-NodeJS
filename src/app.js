@@ -40,14 +40,6 @@ app.get('/about', (req, res) => {
     });
 });
 
-app.get('/help', (req, res) => {
-    res.render('help', {
-        title: 'Help',
-        message: 'This is a help message',
-        name: 'Brett'
-    });
-});
-
 app.get('/weather', (req, res) => {
     if(!req.query.address){
         return res.send({
@@ -71,27 +63,6 @@ app.get('/weather', (req, res) => {
                 address: req.query.address
             });
         });
-    });
-});
-
-app.get('/products', (req, res) => {
-    if(!req.query.search){
-        return res.send({
-            error: 'You must provide a search term'
-        });
-    }
-
-    console.log(req.query)
-    res.send({
-        products: []
-    });
-});
-
-app.get('/help/*', (req, res) => {
-    res.render('404', {
-        title: 'Help',
-        errorMessage: 'Help article not found',
-        name: 'Brett'
     });
 });
 
